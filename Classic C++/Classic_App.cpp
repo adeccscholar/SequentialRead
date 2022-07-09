@@ -1,5 +1,6 @@
-﻿// Classic_App.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
-//
+﻿// Classic C++ App.cpp :
+// This file contains the function "main". Here the execution of the program begins and ends.
+// Variant for classic C++, use of chrono to make it comparable with other variants.
 
 #include "Data.h"
 #include <iostream>
@@ -34,5 +35,6 @@ int main() {
    time = std::chrono::duration_cast<std::chrono::microseconds>(func_ende - func_start).count();
    std::cout << "Partitioned " << cnt << " rows with Classic" << " in "
       << std::setprecision(3) << time / 1000.0 << " ms" << std::endl;
+   std::cout << std::endl << "press enter to continue" << std::endl;
    getchar();
 }

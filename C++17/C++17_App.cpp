@@ -1,5 +1,5 @@
-﻿// Classic_App.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
-//
+﻿// C++17 App.cpp :
+// This file contains the function "main". Here the execution of the program begins and ends.
 
 #include "Data.h"
 #include <iostream>
@@ -16,7 +16,7 @@ int main() {
    proc.Read("D:\\Test\\berlin_infos.dat");
    auto func_ende = std::chrono::high_resolution_clock::now();
    auto time = std::chrono::duration_cast<std::chrono::microseconds>(func_ende - func_start).count();
-   std::cout << "Read " << proc.CountOfAddresses() << " rows with C++17" << " in " 
+   std::cout << "Read " << proc.CountOfAddresses() << " rows with C++17" << " in "
              << std::setprecision(3) << time / 1000.0 << " ms" << std::endl;
 
 
@@ -33,5 +33,6 @@ int main() {
    time = std::chrono::duration_cast<std::chrono::microseconds>(func_ende - func_start).count();
    std::cout << "Partitioned " << cnt << " rows with C++17" << " in "
       << std::setprecision(3) << time / 1000.0 << " ms" << std::endl;
+   std::cout << std::endl << "press enter to continue ..." << std::endl;
    getchar();
    }

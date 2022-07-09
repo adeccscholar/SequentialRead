@@ -1,5 +1,8 @@
-﻿// Classic_App.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
-//
+﻿// Classic_App.cpp :
+// This file contains the function "main". Here the execution of the program begins and ends.
+
+// Embarcadero don't support C++20. But some optimizations are usable.
+// So its more an extented C++17 Variant
 
 #include "Data.h"
 #include <iostream>
@@ -10,7 +13,7 @@ int main() {
    std::cout.setf(std::ios::fixed);
    TProcesses proc;
 
-   std::cout << "Read Data C++20 + optimized" << std::endl;
+   std::cout << "Read Data (C++20) + optimized" << std::endl;
 
    auto func_start = std::chrono::high_resolution_clock::now();
    proc.Read("D:\\Test\\berlin_infos.dat");
@@ -33,5 +36,7 @@ int main() {
    time = std::chrono::duration_cast<std::chrono::microseconds>(func_ende - func_start).count();
    std::cout << "Partitioned " << cnt << " rows with C++17" << " in "
       << std::setprecision(3) << time / 1000.0 << " ms" << std::endl;
+
+   std::cout << std::endl << "press enter to continue" << std::endl;
    getchar();
    }
