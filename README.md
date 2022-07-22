@@ -1,5 +1,5 @@
 # SequentialRead
-Example for the evolution of C++ to read a sequantial file with C++
+Example for the evolution of C++ to read a sequential file with C++
 
 This project contains the prepared examples for the lecture "Evolution of C++ using a (very) simple example". The task was to read in a larger sequential file in the national character set.
 
